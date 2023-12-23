@@ -4,4 +4,9 @@
     <string name="palindrome_hint">Palindrome</string>
     <string name="btn_text_check">CHECK</string>
     <string name="btn_text_next">NEXT</string>
+    <string name="btn_choose_user">Choose a User</string>
+    <string name="greeting">Welcome</string>
+    <string name="username">Jhon Doe</string>
+    <string name="second_screen">Second Screen</string>
+    <string name="selected_user">Selected User Name</string>
 </resources>
