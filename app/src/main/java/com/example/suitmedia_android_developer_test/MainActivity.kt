@@ -60,7 +60,9 @@ class MainActivity : AppCompatActivity() {
 
         btnNext.setOnClickListener {
             if (checked && username.isNotEmpty()) {
-                startActivity(Intent(this, SecondActivity::class.java))
+                val intent = Intent(this, SecondActivity::class.java)
+                intent.putExtra("username", username)
+                startActivity(intent)
             } else if (username.isEmpty()) {
                 showDialogMessage("Username cannot be empty")
             }
