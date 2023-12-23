@@ -9,7 +9,7 @@
     android:padding="20dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/appbar_layout"
+        android:id="@+id/second_appbar_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,26 +47,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/appbar_layout"
+        app:layout_constraintTop_toBottomOf="@id/second_appbar_layout"
         android:layout_marginTop="40dp">
 
         <TextView
             android:id="@+id/greeting"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/greeting"
-            android:textSize="@dimen/_13ssp"
-            android:includeFontPadding="false" />
+            style="@style/MyGreetingTextStyle"/>
 
         <TextView
-            android:id="@+id/username"
+            android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/username"
-            android:textStyle="bold"
-            android:textSize="@dimen/_17ssp"
-            android:includeFontPadding="false"
-            app:layout_constraintTop_toBottomOf="@id/greeting"/>
+            app:layout_constraintTop_toBottomOf="@id/greeting"
+            style="@style/MyNameTextStyle"/>
 
     </LinearLayout>
 
@@ -74,14 +69,11 @@
         android:id="@+id/selected_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:includeFontPadding="false"
-        android:textStyle="bold"
-        android:textSize="@dimen/_22ssp"
-        android:text="@string/selected_user"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        style="@style/MySelectedUserTextStyle"/>
 
     <Button
         android:id="@+id/btn_next"
@@ -89,7 +81,7 @@
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:text="@string/btn_choose_user"
-        android:background="@drawable/custom_btn"
+        style="@style/MyButtonStyle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />
