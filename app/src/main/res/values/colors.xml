@@ -2,8 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primary_ext_olor">#000000</color>
+    <color name="primary_text_color">#000000</color>
     <color name="secondary_text_color">#FFFFFF</color>
+
+    <!-- Main Screen  -->
     <color name="text_hint_color">#50686777</color>
     <color name="btn_color">#2B637B</color>
     <color name="transparent">#00000000</color>
