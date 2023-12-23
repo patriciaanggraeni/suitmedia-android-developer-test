@@ -32,8 +32,11 @@ class ThirdActivity : AppCompatActivity() {
     }
 
     private fun setupListener() {
+        val username = intent.getStringExtra("username")
         btnBack.setOnClickListener {
-            startActivity(Intent(this, SecondActivity::class.java))
+            val intent = Intent(this, SecondActivity::class.java)
+            intent.putExtra("username", username)
+            startActivity(intent)
         }
     }
 }

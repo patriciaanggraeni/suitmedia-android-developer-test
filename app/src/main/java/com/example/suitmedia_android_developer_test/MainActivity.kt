@@ -45,9 +45,7 @@ class MainActivity : AppCompatActivity() {
             username = inputName.text.toString()
             palindrome = inputPaindrome.text.toString()
 
-            if (palindrome.isEmpty()) {
-                message = "Field palindrome cannot be empty"
-            } else if (!isPalindrome(palindrome)) {
+            if (!isPalindrome(palindrome)) {
                 message = "Not Palindrome"
             } else {
                 message = "Is Palindrome"

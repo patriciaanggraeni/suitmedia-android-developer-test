@@ -34,16 +34,24 @@ class SecondActivity : AppCompatActivity() {
 
     private fun setupComponents() {
         val username = intent.getStringExtra("username")
-        this.username.text = username
+        if (username != null) {
+            this.username.text = username
+        } else {
+            this.username.text = "Default Username"
+        }
     }
 
     private fun setupListener() {
+        val username = intent.getStringExtra("username")
+
         btnBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
         btnChooseUser.setOnClickListener {
-            startActivity(Intent(this, ThirdActivity::class.java))
+            val intent = Intent(this, ThirdActivity::class.java)
+            intent.putExtra("username", username)
+            startActivity(intent)
         }
     }
 }
