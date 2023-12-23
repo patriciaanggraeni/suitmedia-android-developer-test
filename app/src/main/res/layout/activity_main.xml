@@ -11,7 +11,7 @@
     android:background="@drawable/background">
 
     <ImageView
-        android:id="@+id/add_icon"
+        android:id="@+id/general_icon"
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/add"
@@ -21,14 +21,10 @@
         android:id="@+id/name_input_layout"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        app:boxCornerRadiusTopStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:hintAnimationEnabled="false"
-        app:hintEnabled="false">
+        style="@style/MyTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/name_hint"
@@ -44,15 +40,11 @@
         android:id="@+id/palindrome_input_layout"
         android:layout_width="310dp"
         android:layout_height="wrap_content"
-        app:boxCornerRadiusTopStart="8dp"
-        app:boxCornerRadiusTopEnd="8dp"
-        app:boxCornerRadiusBottomEnd="8dp"
-        app:boxCornerRadiusBottomStart="8dp"
-        app:hintAnimationEnabled="false"
-        app:hintEnabled="false"
-        android:layout_marginTop="15dp">
+        android:layout_marginTop="15dp"
+        style="@style/MyTextInputLayoutStyle">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/input_palindrome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/palindrome_hint"
@@ -65,12 +57,12 @@
     </com.google.android.material.textfield.TextInputLayout>
     
     <Button
-        android:id="@+id/btn_check_is_palindrome"
+        android:id="@+id/btn_check_palindrome"
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:layout_marginTop="50dp"
         android:text="@string/btn_text_check"
-        android:background="@drawable/custom_btn"/>
+        style="@style/MyButtonStyle"/>
 
     <Button
         android:id="@+id/btn_next"
@@ -78,6 +70,6 @@
         android:layout_height="50dp"
         android:layout_marginTop="15dp"
         android:text="@string/btn_text_next"
-        android:background="@drawable/custom_btn"/>
+        style="@style/MyButtonStyle"/>
 
 </LinearLayout>
