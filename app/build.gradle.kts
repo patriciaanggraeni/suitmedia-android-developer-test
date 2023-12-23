@@ -7,6 +7,12 @@ android {
     namespace = "com.example.suitmedia_android_developer_test"
     compileSdk = 34
 
+    buildFeatures {
+        viewBinding {
+            enable = true
+        }
+    }
+
     defaultConfig {
         applicationId = "com.example.suitmedia_android_developer_test"
         minSdk = 19
