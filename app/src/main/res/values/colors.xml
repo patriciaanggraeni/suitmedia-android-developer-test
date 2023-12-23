@@ -8,5 +8,6 @@
     <!-- Main Screen  -->
     <color name="text_hint_color">#50686777</color>
     <color name="btn_color">#2B637B</color>
-    <color name="transparent">#00000000</color>
+    <color name="transparent_color">#00000000</color>
+    <color name="bottom_stroke_color">#E2E3E4</color>
 </resources>
