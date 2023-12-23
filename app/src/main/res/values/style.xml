@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MyButtonStyle" parent="">
+        <item name="cornerRadius">8dp</item>
+        <item name="backgroundTint">@color/btn_color</item>
+    </style>
+
+    <style name="MyTextInputLayoutStyle" parent="">
+        <item name="hintEnabled">false</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+    </style>
+
+</resources>
