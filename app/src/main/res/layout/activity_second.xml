@@ -32,14 +32,11 @@
             android:id="@+id/second_screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/second_screen"
-            android:textSize="@dimen/_20ssp"
-            android:textStyle="bold"
-            android:includeFontPadding="false"
             app:layout_constraintStart_toEndOf="@id/btn_back"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"/>
+            app:layout_constraintBottom_toBottomOf="parent"
+            style="@style/MySceondScreenHeaderStyle"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
