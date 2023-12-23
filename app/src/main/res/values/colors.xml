@@ -6,4 +6,5 @@
     <color name="secondary_text_color">#FFFFFF</color>
     <color name="text_hint_color">#50686777</color>
     <color name="btn_color">#2B637B</color>
+    <color name="transparent">#00000000</color>
 </resources>
