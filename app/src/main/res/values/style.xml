@@ -15,4 +15,24 @@
         <item name="boxCornerRadiusBottomStart">8dp</item>
     </style>
 
+    <style name="MyGreetingTextStyle" parent="">
+        <item name="android:text">@string/greeting</item>
+        <item name="android:textSize">@dimen/_13ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="MyNameTextStyle" parent="">
+        <item name="android:text">@string/name</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_17ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="MySelectedUserTextStyle" parent="">
+        <item name="android:text">@string/selected_user</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/_22ssp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
 </resources>
