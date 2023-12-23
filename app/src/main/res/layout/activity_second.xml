@@ -74,7 +74,7 @@
         style="@style/MySelectedUserTextStyle"/>
 
     <Button
-        android:id="@+id/btn_next"
+        android:id="@+id/btn_choos_user"
         android:layout_width="310dp"
         android:layout_height="50dp"
         android:layout_marginTop="15dp"

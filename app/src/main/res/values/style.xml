@@ -14,6 +14,8 @@
         <item name="boxCornerRadiusTopEnd">8dp</item>
         <item name="boxCornerRadiusBottomEnd">8dp</item>
         <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="singleLine">true</item>
+        <item name="android:inputType">text</item>
     </style>
 
     <style name="MyGreetingTextStyle" parent="">
