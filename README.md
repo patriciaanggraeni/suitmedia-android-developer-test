@@ -62,7 +62,7 @@
     <tbody>
         <tr>
             <td>
-                <img style="width: 500px" src="app/src/main/java/com/example/suitmedia_android_developer_test/screenshot/third_screen/1.jpg">
+                <img style="width: 420px" src="app/src/main/java/com/example/suitmedia_android_developer_test/screenshot/third_screen/1.jpg">
             </td>
         </tr>
     </tbody>
@@ -78,7 +78,7 @@
     <tbody>
         <tr>
             <td>
-                <img style="width: 500px" src="app/src/main/java/com/example/suitmedia_android_developer_test/screenshot/demo/demo.gif">
+                <img style="width: 420px" src="app/src/main/java/com/example/suitmedia_android_developer_test/screenshot/demo/demo.gif">
             </td>
         </tr>
     </tbody>
