@@ -37,39 +37,53 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupListener() {
         var checked = false
-        var message = ""
         var username = ""
         var palindrome = ""
 
         btnCheck.setOnClickListener {
+            var message = ""
             username = inputName.text.toString()
             palindrome = inputPaindrome.text.toString()
 
-            if (!isPalindrome(palindrome)) {
+            if (palindrome.isEmpty()) {
+                message = "Field palindrome cannot be empty"
+            } else if (palindrome.isNotEmpty() && !isPalindrome(palindrome)) {
                 message = "Not Palindrome"
+                checked = false
             } else {
                 message = "Is Palindrome"
                 checked = true
             }
-
             showDialogMessage(message)
-
         }
 
         btnNext.setOnClickListener {
-            if (checked && username.isNotEmpty()) {
+            username = inputName.text.toString()
+            palindrome = inputPaindrome.text.toString()
+
+            if (username.isEmpty() && palindrome.isEmpty()) {
+                showDialogMessage("Field cannot be empty")
+            } else if (username.isNotEmpty() && !checked) {
+                showDialogMessage("Check palindrome first")
+            } else if (username.isNotEmpty() && palindrome.isEmpty()) {
+                showDialogMessage("Field palindrome cannot be empty")
+            } else if (username.isNotEmpty() && palindrome.isNotEmpty() && !checked) {
+                showDialogMessage("Check palindrome first")
+            } else {
+                inputName.text?.clear()
+                inputPaindrome.text?.clear()
+
                 val intent = Intent(this, SecondActivity::class.java)
                 intent.putExtra("username", username)
                 startActivity(intent)
-            } else if (username.isEmpty()) {
-                showDialogMessage("Username cannot be empty")
+                finish()
             }
         }
     }
 
-    private fun isPalindrome(text: String): Boolean {
-        val cleanedText = text.replace("\\s".toRegex(), "").toLowerCase()
-        return cleanedText == cleanedText.reversed()
+    private fun isPalindrome(value: String): Boolean {
+        val text = value.replace("\\s".toRegex(), "").lowercase()
+        return text == text.reversed()
     }
 
     private fun showDialogMessage(message: String) {

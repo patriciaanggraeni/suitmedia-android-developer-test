@@ -1,4 +1,4 @@
-package com.example.suitmedia_android_developer_test
+package com.example.suitmedia_android_developer_test.model
 
 import com.google.gson.annotations.SerializedName
 

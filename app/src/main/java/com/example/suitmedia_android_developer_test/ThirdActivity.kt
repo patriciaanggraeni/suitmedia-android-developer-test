@@ -3,13 +3,13 @@ package com.example.suitmedia_android_developer_test
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.suitmedia_android_developer_test.adapter.UserAdapter
+import com.example.suitmedia_android_developer_test.api.ApiClient
 import com.example.suitmedia_android_developer_test.databinding.ActivityThirdAcivityBinding
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
@@ -19,12 +19,11 @@ import kotlinx.coroutines.withContext
 class ThirdActivity : AppCompatActivity() {
 
     private var currentPage = 1
-    private lateinit var binding: ActivityThirdAcivityBinding
-
     private lateinit var btnBack: ImageButton
     private lateinit var userList: RecyclerView
     private lateinit var userAdapter: UserAdapter
     private lateinit var swipeRefresh: SwipeRefreshLayout
+    private lateinit var binding: ActivityThirdAcivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -104,7 +103,7 @@ class ThirdActivity : AppCompatActivity() {
                         if (currentPage == 1) {
                             userAdapter.setData(users)
                         } else {
-                            userAdapter.addMoreData(users)
+                            userAdapter.loadMore(users)
                         }
                     }
                 }
@@ -114,9 +113,5 @@ class ThirdActivity : AppCompatActivity() {
                 swipeRefresh.isRefreshing = false
             }
         }
-    }
-
-    private fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }
