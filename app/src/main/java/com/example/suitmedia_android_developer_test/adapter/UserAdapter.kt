@@ -7,8 +7,7 @@ import com.bumptech.glide.Glide
 import com.example.suitmedia_android_developer_test.databinding.UserCardBinding
 import com.example.suitmedia_android_developer_test.model.User
 
-class UserAdapter(private val onUserSelected: (User) -> Unit) :
-    RecyclerView.Adapter<UserAdapter.ViewHolder>() {
+class UserAdapter(private val onUserSelected: (User) -> Unit) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
 
     private var userList: MutableList<User> = mutableListOf()
 
