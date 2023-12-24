@@ -1,10 +1,11 @@
-package com.example.suitmedia_android_developer_test
+package com.example.suitmedia_android_developer_test.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.suitmedia_android_developer_test.databinding.UserCardBinding
+import com.example.suitmedia_android_developer_test.model.User
 
 class UserAdapter(private val onUserSelected: (User) -> Unit) :
     RecyclerView.Adapter<UserAdapter.ViewHolder>() {
@@ -31,7 +32,7 @@ class UserAdapter(private val onUserSelected: (User) -> Unit) :
         notifyDataSetChanged()
     }
 
-    fun addMoreData(users: List<User>) {
+    fun loadMore(users: List<User>) {
         userList.addAll(users)
         notifyDataSetChanged()
     }
@@ -56,7 +57,7 @@ class UserAdapter(private val onUserSelected: (User) -> Unit) :
 
             val fullName = "${user.firstName} ${user.lastName}"
             binding.fullName.text = fullName
-            binding.email.text = user.email
+            binding.email.text = user.email.uppercase()
         }
     }
 }

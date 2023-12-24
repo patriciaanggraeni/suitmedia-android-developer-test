@@ -1,4 +1,4 @@
-package com.example.suitmedia_android_developer_test
+package com.example.suitmedia_android_developer_test.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

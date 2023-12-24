@@ -38,19 +38,8 @@ class SecondActivity : AppCompatActivity() {
         val username = intent.getStringExtra("username")
         val selectedUser = intent.getStringExtra("selected_username")
 
-        if (username != null) {
-            this.username.text = username
-        } else {
-            this.username.text = "Default Username"
-        }
-
-        if (selectedUser != null) {
-            this.selectedUser.text = selectedUser
-        } else {
-            this.selectedUser.text = "Selected User Name"
-        }
-
-
+        this.username.text = username ?: "Guest"
+        this.selectedUser.text = selectedUser ?: "Selected User Name"
     }
 
     private fun setupListener() {
