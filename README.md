@@ -1,4 +1,4 @@
-## APK File: <a href="https://github.com/patriciaanggraeni/suitmedia-android-developer-test/blob/05bf0ff4517d94bb9d0c49673b374318ea6f2791/app/src/main/java/com/example/suitmedia_android_developer_test/apk">download</a>
+## APK File: <a href="https://github.com/patriciaanggraeni/suitmedia-android-developer-test/blob/main/app/src/main/java/com/example/suitmedia_android_developer_test/apk/app-debug.apk">download</a>
 
 ## Screenshot App
 
