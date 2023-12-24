@@ -16,7 +16,6 @@
     <string name="btn_choose_user">Choose a User</string>
     <string name="third_screen">Third Screen</string>
     <string name="selected_user">Selected User Name</string>
-    <string name="firstname">Firstname</string>
-    <string name="lastname">Lastname</string>
+    <string name="full_name">Firstname Lastname</string>
     <string name="email">EMAIL@EMAIL.COM</string>
 </resources>
