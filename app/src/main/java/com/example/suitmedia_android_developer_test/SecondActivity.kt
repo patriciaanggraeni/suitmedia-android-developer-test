@@ -13,6 +13,7 @@ class SecondActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySecondBinding
 
     private lateinit var username: TextView
+    private lateinit var selectedUser: TextView
     private lateinit var btnBack: ImageButton
     private lateinit var btnChooseUser: Button
 
@@ -29,16 +30,27 @@ class SecondActivity : AppCompatActivity() {
     private fun initComponents() {
         username = binding.name
         btnBack = binding.btnBack
+        selectedUser = binding.selectedUser
         btnChooseUser = binding.btnChooseUser
     }
 
     private fun setupComponents() {
         val username = intent.getStringExtra("username")
+        val selectedUser = intent.getStringExtra("selected_username")
+
         if (username != null) {
             this.username.text = username
         } else {
             this.username.text = "Default Username"
         }
+
+        if (selectedUser != null) {
+            this.selectedUser.text = selectedUser
+        } else {
+            this.selectedUser.text = "Selected User Name"
+        }
+
+
     }
 
     private fun setupListener() {
