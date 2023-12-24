@@ -63,6 +63,10 @@ class MainActivity : AppCompatActivity() {
 
             if (username.isEmpty() && palindrome.isEmpty()) {
                 showDialogMessage("Field cannot be empty")
+            } else if (username.isEmpty() && checked) {
+                showDialogMessage("Username cannot be empty")
+            } else if (username.isEmpty() && !checked) {
+                showDialogMessage("Check username and palindrome")
             } else if (username.isNotEmpty() && !checked) {
                 showDialogMessage("Check palindrome first")
             } else if (username.isNotEmpty() && palindrome.isEmpty()) {
