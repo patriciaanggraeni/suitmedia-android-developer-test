@@ -46,6 +46,7 @@ class ThirdActivity : AppCompatActivity() {
         userAdapter = UserAdapter { selectedUser ->
             val username = intent.getStringExtra("username")
             val selectedUsername = "${selectedUser.firstName} ${selectedUser.lastName}"
+
             val intent = Intent(this@ThirdActivity, SecondActivity::class.java)
             intent.putExtra("username", username)
             intent.putExtra("selected_username", selectedUsername)
@@ -61,9 +62,12 @@ class ThirdActivity : AppCompatActivity() {
 
     private fun setupListener() {
         val username = intent.getStringExtra("username")
+        val selectedUsername = intent.getStringExtra("selected_username")
+
         btnBack.setOnClickListener {
             val intent = Intent(this, SecondActivity::class.java)
             intent.putExtra("username", username)
+            intent.putExtra("selected_username", selectedUsername)
             startActivity(intent)
         }
 

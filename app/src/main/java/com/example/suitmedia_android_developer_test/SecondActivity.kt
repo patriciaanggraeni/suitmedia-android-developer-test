@@ -55,6 +55,7 @@ class SecondActivity : AppCompatActivity() {
 
     private fun setupListener() {
         val username = intent.getStringExtra("username")
+        val selectedUsername = intent.getStringExtra("selected_username")
 
         btnBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
@@ -63,6 +64,7 @@ class SecondActivity : AppCompatActivity() {
         btnChooseUser.setOnClickListener {
             val intent = Intent(this, ThirdActivity::class.java)
             intent.putExtra("username", username)
+            intent.putExtra("selected_username", selectedUsername)
             startActivity(intent)
         }
     }
